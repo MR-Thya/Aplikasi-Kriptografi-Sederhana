@@ -196,7 +196,7 @@ def main():
     if args.password:
         password = args.password
     else:
-        password = getpass("Masukkan password untuk {args.mode}: ")
+        password = getpass("Masukkan password untuk: ")
         if not password:
             print("Error: password tidak boleh kosong.")
             sys.exit(1)
