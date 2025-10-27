@@ -32,7 +32,7 @@ python --version
 pip install cryptography
 ```
 
-## 💻 Cara Penggunaan
+## Cara Penggunaan
 
 ### Format Umum (pastikan file data berada di path yang sama dengan file aplikasi)
 ```bash
@@ -154,4 +154,4 @@ Error: Ukuran file (2097152 bytes) melebihi batas maksimal yang ada set di varia
 ```
 **Solusi**: Gunakan file dengan ukuran ≤ batas maksimal
 
-**Aplikasi ini dibuat untuk tujuan pendidikan sebagai bagian dari tugas kuliah.**
+## Aplikasi ini dibuat untuk tujuan pendidikan sebagai bagian dari tugas kuliah.
