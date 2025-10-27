@@ -153,5 +153,3 @@ Error: Password salah atau file rusak.
 Error: Ukuran file (2097152 bytes) melebihi batas maksimal yang ada set di variabel Max_File_Size.
 ```
 **Solusi**: Gunakan file dengan ukuran ≤ batas maksimal
-
-## Aplikasi ini dibuat untuk tujuan pendidikan sebagai bagian dari tugas kuliah.
