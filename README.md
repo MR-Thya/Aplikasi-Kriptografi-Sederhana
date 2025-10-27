@@ -2,20 +2,20 @@
 
 Aplikasi dengan basis CLI untuk enkripsi dan dekripsi file menggunakan algoritma AES-256 (CBC mode) dengan manajemen kunci berbasis password.
 
-## 📋 Deskripsi
+## Deskripsi
 
-Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Keamanan Data Program Studi Sarjana Data Science, Universitas Telkom Bandung. Aplikasi ini mengimplementasikan enkripsi simetris menggunakan AES-256 dalam mode CBC (Cipher Block Chaining) dengan key derivation function PBKDF2.
+Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Keamanan Data program studi Data Science. Aplikasi ini mengimplementasikan enkripsi simetris menggunakan AES-256 dalam mode CBC (Cipher Block Chaining) dengan key derivation function PBKDF2.
 
-## 🔐 Fitur Utama
+## Fitur Utama
 
-- ✅ **Enkripsi File**: Mengenkripsi file dengan AES-256 CBC mode
-- ✅ **Dekripsi File**: Mendekripsi file yang telah dienkripsi
-- ✅ **Manajemen Kunci Berbasis Password**: Menggunakan PBKDF2 untuk menurunkan kunci dari password
-- ✅ **Keamanan Tinggi**: Salt dan IV unik untuk setiap enkripsi
-- ✅ **Penanganan Error**: Pesan error yang jelas untuk berbagai kondisi
-- ✅ **Batasan Ukuran**: Mendukung file hingga 1 MB
+- **Enkripsi File**: Mengenkripsi file dengan AES-256 CBC mode
+- **Dekripsi File**: Mendekripsi file yang telah dienkripsi
+- **Manajemen Kunci Berbasis Password**: Menggunakan PBKDF2 untuk menurunkan kunci dari password
+- **Keamanan Tinggi**: Salt dan IV unik untuk setiap enkripsi
+- **Penanganan Error**: Pesan error yang jelas untuk berbagai kondisi
+- **Batasan Ukuran**: Mendukung file hingga 1 MB
 
-## 📦 Persyaratan Sistem
+## Persyaratan Sistem
 
 - Python 3.7 atau lebih baru
 - Library `cryptography`
@@ -36,7 +36,7 @@ pip install cryptography
 
 ### Format Umum (pastikan file data berada di path yang sama dengan file aplikasi)
 ```bash
-python crypto_cli.py [mode (encrypt atau decrypt)] [input_file] [output_file] [-p PASSWORD]
+python crypto_cli.py [mode (encrypt atau decrypt)] [nama input_file] [nama output_file] [-p PASSWORD (bebas asal sama saat melakukan encrypt dan decrypt)]
 ```
 
 ### Enkripsi File
@@ -49,7 +49,7 @@ Program akan meminta Anda memasukkan password secara aman.
 
 **Metode 2: Password sebagai argumen**
 ```bash
-python crypto_cli.py encrypt data.csv data.csv.enc -p MySecretPassword123
+python crypto_cli.py encrypt data.csv data.csv.enc -p MySecretPassword123 (password bebas asal sama saat melakukan encrypt dan decrypt)
 ```
 
 ### Dekripsi File
@@ -61,10 +61,10 @@ python crypto_cli.py decrypt data.csv.enc data_decrypted.csv
 
 **Metode 2: Password sebagai argumen**
 ```bash
-python crypto_cli.py decrypt data.csv.enc data_decrypted.csv -p MySecretPassword123
+python crypto_cli.py decrypt data.csv.enc data_decrypted.csv -p MySecretPassword123 (password bebas asal sama saat melakukan encrypt dan decrypt)
 ```
 
-## 📝 Contoh Penggunaan
+## Contoh Penggunaan
 
 ### Contoh 1: Enkripsi file CSV
 ```bash
@@ -105,7 +105,7 @@ python crypto_cli.py decrypt dataset.csv.enc dataset_restored.csv
 # ✓ Operasi selesai dengan sukses!
 ```
 
-## 🔒 Detail Teknis Implementasi
+## Detail Teknis Implementasi
 
 ### Algoritma Kriptografi
 - **Algoritma**: AES (Advanced Encryption Standard)
@@ -128,14 +128,13 @@ python crypto_cli.py decrypt dataset.csv.enc dataset_restored.csv
 [Salt: 16 bytes] + [IV: 16 bytes] + [Ciphertext: variable]
 ```
 
-## ⚠️ Batasan & Catatan Penting
+## Batasan & Catatan Penting
 
-1. **Ukuran File**: Aplikasi hanya mendukung file dengan ukuran maksimal 1 MB
-2. **Password**: Gunakan password yang kuat dan mudah diingat
-3. **Keamanan Password**: Disarankan menggunakan mode interaktif (tanpa flag -p) agar password tidak tercatat di command history
-4. **Backup**: Selalu simpan backup file asli sebelum enkripsi
+1. **Password**: Gunakan password yang kuat dan mudah diingat
+2. **Keamanan Password**: Disarankan menggunakan mode interaktif (tanpa flag -p) agar password tidak tercatat di command history
+3. **Backup**: Selalu simpan backup file asli sebelum enkripsi
 
-## ❌ Penanganan Error
+## Penanganan Error
 
 ### Error: File tidak ditemukan
 ```bash
@@ -151,9 +150,9 @@ Error: Password salah atau file rusak.
 
 ### Error: Ukuran file terlalu besar
 ```bash
-Error: Ukuran file (2097152 bytes) melebihi batas maksimal (1 MB).
+Error: Ukuran file (2097152 bytes) melebihi batas maksimal yang ada set di variabel Max_File_Size.
 ```
-**Solusi**: Gunakan file dengan ukuran ≤ 1 MB
+**Solusi**: Gunakan file dengan ukuran ≤ batas maksimal
 
 ## 📚 Referensi
 
@@ -162,16 +161,5 @@ Error: Ukuran file (2097152 bytes) melebihi batas maksimal (1 MB).
 - [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2)
 - [CBC Mode](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC)
 
-## 👨‍🎓 Informasi Pengembang
 
-- **Dibuat untuk**: Tugas Mata Kuliah Keamanan Data
-- **Program Studi**: Sarjana Data Science
-- **Universitas**: Universitas Telkom Bandung
-
-## 📄 Lisensi
-
-Aplikasi ini dibuat untuk tujuan pendidikan sebagai bagian dari tugas kuliah.
-
----
-
-**Catatan**: Aplikasi ini dirancang untuk tujuan pembelajaran. Untuk penggunaan produksi yang sesungguhnya, pertimbangkan untuk menggunakan solusi kriptografi yang sudah teruji dan diaudit secara profesional.
+**Aplikasi ini dibuat untuk tujuan pendidikan sebagai bagian dari tugas kuliah.**
