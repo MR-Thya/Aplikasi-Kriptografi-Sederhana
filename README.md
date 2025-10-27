@@ -20,7 +20,7 @@ Aplikasi ini dibuat untuk memenuhi tugas mata kuliah Keamanan Data program studi
 - Python 3.7 atau lebih baru
 - Library `cryptography`
 
-## 🚀 Instalasi
+## Instalasi
 
 1. Pastikan Python 3 sudah terinstal di sistem Anda:
 ```bash
@@ -153,13 +153,6 @@ Error: Password salah atau file rusak.
 Error: Ukuran file (2097152 bytes) melebihi batas maksimal yang ada set di variabel Max_File_Size.
 ```
 **Solusi**: Gunakan file dengan ukuran ≤ batas maksimal
-
-## 📚 Referensi
-
-- [Cryptography Library Documentation](https://cryptography.io/)
-- [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-- [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2)
-- [CBC Mode](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC)
 
 
 **Aplikasi ini dibuat untuk tujuan pendidikan sebagai bagian dari tugas kuliah.**
